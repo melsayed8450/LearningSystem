@@ -1,13 +1,13 @@
 #ifndef HOMEPAGE_H
 #define HOMEPAGE_H
 
-#include <QDialog>
+#include <QMainWindow>
 
 namespace Ui {
 class HomePage;
 }
 
-class HomePage : public QDialog
+class HomePage : public QMainWindow
 {
     Q_OBJECT
 

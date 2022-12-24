@@ -29,43 +29,28 @@ bool Admin::checkPassword(QString password){
     else return true;
 }
 
-void Admin::registerNew(QString username, QString password, QString fullName, QString adress, QString phoneNumber)
+void Admin::registerNew(QString username, QString password, QString fullName)
 {
-    if(!checkUsername(username))
-    {
-        qDebug()<<"This username is already taken";
-        return;
-    }
-    if(!checkPassword(password))
-    {
-        qDebug()<<"Passord should be longer than 8 characters";
-        return;
-    }
-        adress = adress;
-        fullName = fullName;
-        phoneNumber = phoneNumber;
-       password = password;
-       username = username;
-        check[username] = hashing(password);
+
+
+        this->fullName = fullName;
+
+      this-> password = password;
+       this->username = username;
+        this->check[username] = hashing(password);
 }
 
-    void Admin::loginCheck(QString username, QString password)
+    bool Admin::loginCheck(QString username, QString password)
     {
-        if(check[username] == hashing(password)) cout<< "Login successful";
+        if(check[username] == hashing(password)) return true;
 
-        else  qDebug()<< "Login failed";
+        else  return false;
 
     }
 
-    void Admin::setAdress(QString newAdress)
-    {
-        adress = newAdress;
-    }
 
-    void Admin::setPhoneNumber(QString newPhoneNumber)
-    {
-        phoneNumber = newPhoneNumber;
-    }
+
+
 
     void Admin::setFullName(QString newFullName)
     {
@@ -84,19 +69,13 @@ void Admin::registerNew(QString username, QString password, QString fullName, QS
         else qDebug()<< "Username is already taken";
     }
 
-    QString Admin::getAdress()
-    {
-        return adress;
-    }
+
 
     QString Admin::getFullName()
     {
         return fullName;
     }
 
-    QString Admin::getPhoneNumber()
-    {
-        return phoneNumber;
-    }
+
 
     Admin::~Admin(){}

@@ -2,7 +2,7 @@
 #define LOGINPAGE_H
 
 #include <QMainWindow>
-#include "HomePage.h"
+#include "./HomePage.h"
 #include "SignupPage.h"
 
 QT_BEGIN_NAMESPACE

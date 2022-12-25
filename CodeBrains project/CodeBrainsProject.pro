@@ -12,6 +12,8 @@ SOURCES += \
     AddCoursePage.cpp \
     AddProfessorPage.cpp \
     AddStudentPage.cpp \
+    AdminEditPage.cpp \
+    AdminInfoPage.cpp \
     CoursePage.cpp \
     HomePage.cpp \
     ProfessorPage.cpp \
@@ -28,6 +30,8 @@ HEADERS += \
     AddCoursePage.h \
     AddProfessorPage.h \
     AddStudentPage.h \
+    AdminEditPage.h \
+    AdminInfoPage.h \
     CoursePage.h \
     HomePage.h \
     LoginPage.h \
@@ -44,6 +48,8 @@ FORMS += \
     AddCoursePage.ui \
     AddProfessorPage.ui \
     AddStudentPage.ui \
+    AdminEditPage.ui \
+    AdminInfoPage.ui \
     CoursePage.ui \
     HomePage.ui \
     LoginPage.ui \

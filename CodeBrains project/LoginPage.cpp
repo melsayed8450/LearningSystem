@@ -1,4 +1,4 @@
-#include "./LoginPage.h"
+#include "LoginPage.h"
 #include "./ui_LoginPage.h"
 #include "admin.h"
 #include <QPixmap>
@@ -27,7 +27,7 @@ void LoginPage::on_loginButton_clicked()
 
     if(admin->loginCheck(ui->usernamLlineEdit->text(),ui->passworLlineEdit->text())){
         hide();
-        homePage = new HomePage(this);
+        homePage = new HomePage(admin->getFullName(ui->usernamLlineEdit->text()),ui->usernamLlineEdit->text() , this);
         homePage->show();
     }
     else{

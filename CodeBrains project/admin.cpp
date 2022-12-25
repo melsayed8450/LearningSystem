@@ -29,15 +29,15 @@ bool Admin::checkPassword(QString password){
     else return true;
 }
 
-void Admin::registerNew(QString username, QString password, QString fullName)
+void Admin::registerNew(QString username, QString password, QString fullName, QMap<QString, int> &check, QMap<QString, QString> &usernameFullName)
 {
 
 
         this->fullName = fullName;
-
+         usernameFullName[username] = fullName;
       this-> password = password;
        this->username = username;
-        this->check[username] = hashing(password);
+        check[username] = hashing(password);
 }
 
     bool Admin::loginCheck(QString username, QString password)
@@ -71,9 +71,9 @@ void Admin::registerNew(QString username, QString password, QString fullName)
 
 
 
-    QString Admin::getFullName()
+    QString Admin::getFullName(QString username)
     {
-        return fullName;
+        return usernameFullName[username];
     }
 
 

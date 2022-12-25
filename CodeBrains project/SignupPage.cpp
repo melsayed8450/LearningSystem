@@ -2,6 +2,7 @@
 #include "ui_SignupPage.h"
 #include "admin.h"
 #include <QMessageBox>
+#include <QMap>
 
 SignupPage::SignupPage(QWidget *parent) :
     QMainWindow(parent),
@@ -29,9 +30,9 @@ void SignupPage::on_registerButton_clicked()
         }
         else{
            hide();
-            homePage = new HomePage(this);
+            homePage = new HomePage(ui->fullNameLineEdit->text(), ui->usernameLineEdit->text(),this);
             homePage->show();
-            admin->registerNew(ui->usernameLineEdit->text(), ui->passwordLineEdit->text(), ui->fullNameLineEdit->text());
+            admin->registerNew(ui->usernameLineEdit->text(), ui->passwordLineEdit->text(), ui->fullNameLineEdit->text(), admin->check, admin->usernameFullName);
 
         }
     }

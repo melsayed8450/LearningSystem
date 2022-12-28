@@ -1,6 +1,7 @@
 #include "HomePage.h"
 #include "ui_HomePage.h"
 #include "admin.h"
+#include "LoginPage.h"
 #include <QProcess>
 
 HomePage::HomePage(QString name, QString username ,QWidget *parent) :
@@ -15,6 +16,7 @@ HomePage::HomePage(QString name, QString username ,QWidget *parent) :
 
 }
 
+
 HomePage::~HomePage()
 {
     delete ui;
@@ -25,8 +27,10 @@ HomePage::~HomePage()
 
 void HomePage::on_logoutButton_clicked()
 {
-    qApp->quit();
-    QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
+    LoginPage *loginPage;
+    loginPage = new LoginPage(this);
+    hide();
+    loginPage->show();
 }
 
 

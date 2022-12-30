@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../CodeBrains project/SignupPage.h"
+#include "../../../../Learning system/CodeBrains---Last/CodeBrains project/SignupPage.h"
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'SignupPage.h' doesn't include <QObject>."

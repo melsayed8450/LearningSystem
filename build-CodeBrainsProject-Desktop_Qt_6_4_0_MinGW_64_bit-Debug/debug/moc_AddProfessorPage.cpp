@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../CodeBrains project/AddProfessorPage.h"
+#include "../../../../Learning system/CodeBrains---Last/CodeBrains project/AddProfessorPage.h"
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'AddProfessorPage.h' doesn't include <QObject>."
